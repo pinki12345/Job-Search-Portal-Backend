@@ -8,8 +8,9 @@ const PORT = process.env.PORT;
 const router = require("./routers/routes");
 const cors = require("cors");
 
+
 app.use(cors({
-    origin: "http://localhost:5173",
+    origin: ["http://localhost:5173", "https://job-search-portal-frontend.vercel.app"],
     exposedHeaders: ['Authorization'],
     credentials: true,
   }));
